@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Calculadora de <strong>IMC</strong></h1>
+        <form id="formIMC">
+            <input type="number" step="0.01" name="peso" placeholder="Digite o peso" required />
+
+            <input type="number" step="0.01" name="altura" placeholder="Digite a altura" required />
+
+            <button type="submit">Calcular</button>
+
+            <div id="result"></div>
+        </form>
+
+    </main>
+
+    <script type="module">
+        import IMC from './javascript/imc.js'
+
+        const form = document.forms['formIMC']
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+        
+            if (!form.peso.value || !form.altura.value) return
+
+            const peso = parseFloat(form.peso.value.replace(",", "."))
+            const altura = parseFloat(form.altura.value.replace(",", "."))
+
+            const imc = new IMC(peso, altura)
+            imc.calcular(peso, altura)
+
+            showResult(imc)
+        })
+
+        const showResult = (imc) => {
+            // imc.imc = imc.imc.toFixed(2)
+
+            document.getElementById('result').innerHTML = `
+                <h3>${imc.imc.toFixed(2)} Kg/m²</h3>
+                <h2>${imc.classificacao}</h2>
+                <p><strong>O que pode acontecer:</strong></p>
+                <p>${imc.consequencia}</p>
+            `
+        }
+
+    </script>
+</body>
+
+</html>
