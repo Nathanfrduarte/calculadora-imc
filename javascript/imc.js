@@ -1,31 +1,31 @@
-import CalcularIMC from './CalcularIMC.js'
+import CalcularIMC from './calcularIMC.js'
 
 class IMC {
 
     //Como não queremos que as properties sejam manipuladas externamente
     //Fornecemos GETTERS somente leitura para nossas variáveis
     get peso() {
-        return this._peso;
+        return this._peso
     }
 
     get altura() {
-        return this._altura;
+        return this._altura
     }
 
     get imc() {
-        return this._imc;
+        return this._imc
     }
 
     get classificacao() {
-        return this._classificacao;
+        return this._classificacao
     }
 
     get consequencia() {
-        return this._consequencia;
+        return this._consequencia
     }
 
     get data() {
-        return this._data;
+        return this._data
     }
 
     constructor(peso, altura) {
@@ -43,8 +43,8 @@ class IMC {
         
         //Atribuímos valores a properts do objeto.
         this._imc = imc;
-        this._classificacao = classificacao;
-        this._consequencia = consequencia;
+        this._classificacao = classificacao
+        this._consequencia = consequencia
     }
 }
 

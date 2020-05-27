@@ -30,4 +30,4 @@ function CalcularIMC(peso, altura) {
     return {imc, classificacao, consequencia}
 }
 
-export default CalcularIMC;
+export default CalcularIMC
