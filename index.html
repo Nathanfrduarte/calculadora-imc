@@ -36,6 +36,7 @@
         import IMC from './javascript/imc.js'
         import IMCHistory from './javascript/imcHistory.js'
 
+        // Get the form by id
         const form = document.forms['formIMC']
 
         form.addEventListener('submit', (event) => {
@@ -81,11 +82,17 @@
             // Timeout to show the history
             setTimeout(() => divResult.classList.add('visible'), 200)
         }
+        
+        const history = new IMCHistory()
+
+        // Get the history buttom
+        const btnHistory = document.getElementById('btn-history')
+        
+        // Count the length in the history
+        btnHistory.innerHTML = `&#128194; Histórico [${history.history.length}]`
 
         // Action Listener buttom click to show the history
-        const onClickHistory = document.getElementById('btn-history')
-        onClickHistory.addEventListener('click', () => {
-            const history = new IMCHistory()
+        btnHistory.addEventListener('click', () => {
             showHistory(history)
         })
 
