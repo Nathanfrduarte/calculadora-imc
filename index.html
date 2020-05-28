@@ -12,17 +12,19 @@
 
     <main>
 
-        <h1>Calculadora de <strong>IMC</strong></h1>
-        <form id="formIMC">
-            <input type="number" min="0" title="Digite o peso" step="0.01" name="peso" placeholder="Digite o peso" required />
+        <div id="calculadora-imc">
+            <h1>Calculadora de <strong>IMC</strong></h1>
+            <form id="formIMC">
+                <input type="number" min="0" title="Digite o peso" step="0.01" name="peso" placeholder="Digite o peso" required />
 
-            <input type="number" min="0" title="Digite a altura" step="0.01" name="altura" placeholder="Digite a altura" required />
+                <input type="number" min="0" title="Digite a altura" step="0.01" name="altura" placeholder="Digite a altura" required />
 
-            <button id="btn-result" type="submit">Calcular</button>
+                <button id="btn-result" type="submit">Calcular</button>
 
-        </form>
-        
-        <div id="result" class="fade-in"></div>
+            </form>
+            
+            <div id="result" class="fade-in"></div>
+        </div>
 
         <button id="btn-history">&#128194; Histórico</button>
 
@@ -117,6 +119,7 @@
                     <h2>${hist._classificacao}</h2>
                     <h3>${hist._imc.toFixed(2)} kg/m²</h3>
                 </div>
+                <hr/>
                 `
             }, '')
 

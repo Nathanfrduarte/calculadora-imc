@@ -46,6 +46,11 @@ main {
   font-size: 14px;
 }
 
+#calculadora-imc {
+  padding: 5%;
+  box-shadow: 0px .5px 5px 1px #888888;
+}
+
 h1 {
   font-weight: 100;
   text-transform: uppercase;
@@ -109,8 +114,10 @@ h2 {
   font-weight: 900;
 }
 
-#resultado {
-  margin-bottom: 20px;
+#result {
+  /* margin-bottom: 20px; */
+  box-shadow: 0px .5px 5px 1px #888888;
+  padding: 2%;
 }
 
 /* History */
@@ -142,6 +149,7 @@ button#btn-history:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
