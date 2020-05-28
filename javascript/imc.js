@@ -1,4 +1,4 @@
-import CalcularIMC from '/calcularIMC.js'
+import CalcularIMC from './calcularIMC.js'
 
 class IMC {
 
@@ -41,7 +41,7 @@ class IMC {
             this.altura
         );
         
-        //Atribuímos valores as propriedade do objeto
+        //Atribuímos valores as propriedade. do objeto
         this._imc = imc;
         this._classificacao = classificacao
         this._consequencia = consequencia
