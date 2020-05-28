@@ -1,6 +1,7 @@
 # Calculadora de IMC
 
 Calculadora de IMC com armazenamento de histórico com Local Storage.
+
 A aplicação funcional pode ser utilizada : https://nathanfrduarte.github.io/calculadora-imc
 
 ## Classificações utilizadas
