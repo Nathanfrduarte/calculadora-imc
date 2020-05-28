@@ -1,5 +1,5 @@
-import IMC from './javascript/imc.js'
-import IMCHistory from './javascript/imcHistory.js'
+import IMC from '/javascript/imc.js'
+import IMCHistory from '/javascript/imcHistory.js'
 
 const form = document.forms['formIMC']
 
