@@ -116,8 +116,11 @@
                 return template + `
                 <div class="imc-history">
                     <p>${data.toLocaleDateString()}</p>
-                    <h2>${hist._classificacao}</h2>
-                    <h3>${hist._imc.toFixed(2)} kg/m²</h3>
+                    <h2>${hist._classificacao}:</h2>
+                    <h3>${hist._imc.toFixed(2)} kg/m²</h3> </br></br>
+                    <p><b>Peso: </b> ${hist._peso}</p>
+                    <p><b>Altura: </b> ${hist._altura}</p>
+                    <p><b>Consequências: </b> ${hist._consequencia}</p>
                 </div>
                 <hr/>
                 `
