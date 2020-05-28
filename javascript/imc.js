@@ -1,4 +1,4 @@
-import CalcularIMC from '../javascript/calcularIMC.js'
+import CalcularIMC from './calcularIMC.js'
 
 class IMC {
 
