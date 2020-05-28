@@ -70,18 +70,30 @@ input {
   text-align: center;
 }
 
-button {
+button#btn-result{
   display: block;
   width: 100%;
   font-size: 16px;
   padding: 15px 10px;
   margin: 10px 0;
   border-radius: 5px;
-  border: none;
-  background-color: #75db64;
+  border: 2px solid #0487CC;
+  background-color: #0487CC;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 24px;
+}
+
+button#btn-result:hover {
+  transition: .3s;
+  background-color: #ffffff;
+  color: #0487CC;
+}
+
+button#btn-result:focus {
+  transition: .3s;
+  background-color: #ffffff;
+  color: #0487CC;
 }
 
 h3 {
@@ -103,6 +115,7 @@ h2 {
 
 /* History */
 button#btn-history {
+  border: none;
   background: none;
   font-size: 16px;
   color: #222222;
@@ -110,20 +123,32 @@ button#btn-history {
   margin-top: 20px;
   font-weight: bold;
 }
+
+button#btn-history:active {
+  border: none;
+}
+
+button#btn-history:focus {
+  border: none;
+}
+
 #history {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
+
 .imc-history {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 30px;
 }
+
 .imc-history p {
   width: 100%;
 }
+
 .imc-history h2,
 .imc-history h3 {
   margin: 0;

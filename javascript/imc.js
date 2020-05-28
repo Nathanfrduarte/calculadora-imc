@@ -31,7 +31,7 @@ class IMC {
     constructor(peso, altura) {
         this._peso = peso
         this._altura = altura
-        this._data = new Date()
+        this._data = new Date().getTime() // Date and Time to be possible to order by
     }
 
     calcular() {
@@ -41,7 +41,7 @@ class IMC {
             this.altura
         );
         
-        //Atribuímos valores a properts do objeto.
+        //Atribuímos valores as propriedades do objeto
         this._imc = imc;
         this._classificacao = classificacao
         this._consequencia = consequencia
